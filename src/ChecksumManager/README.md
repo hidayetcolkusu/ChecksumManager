@@ -2,11 +2,11 @@
 
 Description
 
-## Checksum Calculator
+## Checksum Calculation
 
 Description
 
-###  Object Checksum Calculator
+###  Object Checksum Calculation
 
 Description
 
@@ -30,7 +30,7 @@ Description
 ```
 
 
-###  Json Checksum Calculator
+###  Json Checksum Calculation
 
 Description
 
@@ -43,7 +43,7 @@ Description
  Result: 43460
 ```
 
-###  Byte Aray Checksum Calculator
+###  Byte Array Checksum Calculation
 
 Description
 
@@ -53,5 +53,5 @@ Description
  byte[] bytes = new byte[] { 0, 1, 2, 3, 4 };
 
  ushort checksum = checksumCalculator.Calculate(bytes);
- Result: 43460
+ Result: 4001
 ```
