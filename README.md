@@ -148,6 +148,38 @@ Description
 Description
 
 ```
+ public class TestClass
+ {
+    public string Name     { get; set; }
+    public string Surname  { get; set; }
+    public ushort Checksum { get; set; }
+ }
+ 
+ ChecksumCalculator checksumCalculator = new ChecksumCalculator();
+
+ TestClass testClass = new TestClass()
+ {
+    Name     = "Hidayet Raşit",
+    Surname  = "ÇÖLKUŞU",
+    Checksum = 0
+ };
+
+ bool result = checksumCalculator.Compare(testClass, 46781);
+ Result: true
+```
+
+``` 
+ ChecksumCalculator checksumCalculator = new ChecksumCalculator();
+
+ TestClass testClass = new TestClass()
+ {
+    Name     = "Hidayet Raşit",
+    Surname  = "ÇÖLKUŞU",
+    Checksum = 46781
+ };
+
+ bool result = checksumCalculator.Compare(testClass);
+ Result: true
 ```
 
 ###  Comparing Json Checksum
