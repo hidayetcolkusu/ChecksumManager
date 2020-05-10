@@ -211,3 +211,86 @@
  bool result = checksumCalculator.Compare(bytes, 4);
  Result:true
 ```
+
+##  Checksum Attribute
+
+
+```
+ public class TestClass
+ {
+    public string Name    { get; set; }
+    public string SurName { get; set; }
+ }
+
+ public class TestController : Controller
+ {
+    [Checksum]
+    [System.Web.Http.HttpPost]
+    public bool SetData([System.Web.Http.FromBody]TestClass testClass)
+    {
+       return true;
+    }
+ }
+```
+
+```
+ TestClass TestClass = new TestClass()
+ {
+    Name    = "Hidayet Raşit",
+    SurName = "ÇÖLKUŞU"
+ };
+                 
+ HttpWebRequest request = (HttpWebRequest)
+ string testLink = "https://localhost:44324/Test/SetData";
+ WebRequest.Create(testLink);
+ request.KeepAlive           = false;
+ request.ProtocolVersion     = HttpVersion.Version10;
+ request.Method              = "POST";
+ byte[] postBytes            = Encoding.UTF8.GetBytes(Newtonsoft.Json.JsonConvert.SerializeObject(TestClass));
+ request.ContentType         = "application/json; charset=UTF-8";
+ request.Accept              = "application/json";
+ request.ContentLength       = postBytes.Length;
+ request.Headers["Checksum"] = "52195";
+ Stream requestStream        = request.GetRequestStream(); 
+ requestStream.Write(postBytes, 0, postBytes.Length);
+ requestStream.Close();
+
+ HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+
+ using (StreamReader rdr = new StreamReader(response.GetResponseStream()))
+ {
+    responseText = rdr.ReadToEnd();
+ }
+ Result:true
+```
+
+```
+ TestClass TestClass = new TestClass()
+ {
+    Name    = "Hidayet Raşit",
+    SurName = "ÇÖLKUŞU"
+ };
+                 
+ HttpWebRequest request = (HttpWebRequest)
+ string testLink = "https://localhost:44324/Test/SetData";
+ WebRequest.Create(testLink);
+ request.KeepAlive           = false;
+ request.ProtocolVersion     = HttpVersion.Version10;
+ request.Method              = "POST";
+ byte[] postBytes            = Encoding.UTF8.GetBytes(Newtonsoft.Json.JsonConvert.SerializeObject(TestClass));
+ request.ContentType         = "application/json; charset=UTF-8";
+ request.Accept              = "application/json";
+ request.ContentLength       = postBytes.Length;
+ request.Headers["Checksum"] = "1234";
+ Stream requestStream        = request.GetRequestStream(); 
+ requestStream.Write(postBytes, 0, postBytes.Length);
+ requestStream.Close();
+
+ HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+
+ using (StreamReader rdr = new StreamReader(response.GetResponseStream()))
+ {
+    responseText = rdr.ReadToEnd();
+ }
+ Result:"HTTP Error 401.0 - Unauthorized"
+```
