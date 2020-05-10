@@ -7,6 +7,12 @@ Description
 Description
 
 ```
+ public class TestClass
+ {
+    public string Name    { get; set; }
+    public string Surname { get; set; }
+ } 
+ 
  ChecksumCalculator checksumCalculator = new ChecksumCalculator();
 
  TestClass testClass = new TestClass()
@@ -26,13 +32,7 @@ Description
 
 Description
 
-```
- public class TestClass
- {
-    public string Name    { get; set; }
-    public string Surname { get; set; }
- } 
- 
+``` 
  ChecksumCalculator checksumCalculator = new ChecksumCalculator();
 
  TestClass testClass = new TestClass()
