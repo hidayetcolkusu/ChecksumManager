@@ -82,16 +82,57 @@ Description
 Description
 
 ```
+ public class TestClass
+ {
+    public string Name     { get; set; }
+    public string Surname  { get; set; }
+    public ushort Checksum { get; set; }
+ }
+ 
+ ChecksumCalculator checksumCalculator = new ChecksumCalculator();
+
+ TestClass testClass = new TestClass()
+ {
+    Name     = "Hidayet Raşit",
+    Surname  = "ÇÖLKUŞU",
+    Checksum = 0
+ };
+
+ testClass = checksumCalculator.Fill(testClass); 
+ Result: testClass.Checksum : 46781
 ```
 
 ###  Filling Json
+
 Description
 
 ```
+ ChecksumCalculator checksumCalculator = new ChecksumCalculator();
+
+ string json = @"{""Name"":""Hidayet Raşit"",""Surname"":""ÇÖLKUŞU""}";
+
+ json = checksumCalculator.Fill(json);
+ Result: {"Name":"Hidayet Raşit","Surname":"ÇÖLKUŞU","Checksum":43460}
+```
+
+```
+ ChecksumCalculator checksumCalculator = new ChecksumCalculator();
+
+ string json = @"{""Name"":""Hidayet Raşit"",""Surname"":""ÇÖLKUŞU"",""Checksum"":0}";
+
+ json = checksumCalculator.Fill(json);
+ Result: {"Name":"Hidayet Raşit","Surname":"ÇÖLKUŞU","Checksum":46781}
 ```
 
 ###  Filling Byte Array
+
 Description
 
 ```
+ ChecksumCalculator checksumCalculator = new ChecksumCalculator();
+
+ byte[] bytes = new byte[] { 0, 1, 2, 3, 0, 0 };
+
+ bytes = checksumCalculator.Fill(bytes, 4);
+ Result: { 0, 1, 2, 3, 204, 120 }
 ```
