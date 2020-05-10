@@ -2,6 +2,22 @@
 
 Description
 
+## Object Conversion
+
+Description
+
+```
+ ChecksumCalculator checksumCalculator = new ChecksumCalculator();
+
+ TestClass testClass = new TestClass()
+ {
+    Name    = "Hidayet Raşit",
+    Surname = "ÇÖLKUŞU"
+ };
+
+  byte[] bytes = checksumCalculator.GetByteArray(testClass); 
+```
+
 ## Checksum Calculation
 
 Description
