@@ -1,2 +1,5 @@
 # ChecksumManager
- ChecksumManager
+ 
+ Checksum Calculator
+ 
+ 
