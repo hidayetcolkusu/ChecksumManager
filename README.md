@@ -1,5 +1,10 @@
 # ChecksumManager
 
+To install the library from NuGet using the .NET SDK run:
+```
+paket add ChecksumManager --version 1.0.0
+```
+
 
 ## Object Conversion
 
