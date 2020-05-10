@@ -4,7 +4,6 @@ Description
 
 ## Object Conversion
 
-Description
 
 ```
  public class TestClass
@@ -25,12 +24,10 @@ Description
 ```
 
 ## Checksum Calculation
-
-Description
+ 
 
 ###  Object Checksum Calculation
-
-Description
+ 
 
 ``` 
  ChecksumCalculator checksumCalculator = new ChecksumCalculator();
@@ -60,8 +57,7 @@ Description
 ```
 
 ###  Byte Array Checksum Calculation
-
-Description
+ 
 
 ```
  ChecksumCalculator checksumCalculator = new ChecksumCalculator();
@@ -74,12 +70,10 @@ Description
 
 
 ## Filling
-
-Description
+ 
 
 ###  Filling Object
-
-Description
+ 
 
 ```
  public class TestClass
@@ -103,8 +97,7 @@ Description
 ```
 
 ###  Filling Json
-
-Description
+ 
 
 ```
  ChecksumCalculator checksumCalculator = new ChecksumCalculator();
@@ -125,8 +118,7 @@ Description
 ```
 
 ###  Filling Byte Array
-
-Description
+ 
 
 ```
  ChecksumCalculator checksumCalculator = new ChecksumCalculator();
@@ -144,8 +136,7 @@ Description
 
 
 ###  Comparing Object Checksum
-
-Description
+ 
 
 ```
  public class TestClass
@@ -183,8 +174,7 @@ Description
 ```
 
 ###  Comparing Json Checksum
-
-Description
+ 
 
 ```
  ChecksumCalculator checksumCalculator = new ChecksumCalculator();
@@ -205,8 +195,7 @@ Description
 ```
 
 ###  Comparing Byte Array Checksum
-
-Description
+ 
 
 ```
  ChecksumCalculator checksumCalculator = new ChecksumCalculator();
