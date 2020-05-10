@@ -15,7 +15,7 @@ Description
     Surname = "ÇÖLKUŞU"
  };
 
-  byte[] bytes = checksumCalculator.GetByteArray(testClass); 
+ byte[] bytes = checksumCalculator.GetByteArray(testClass); 
 ```
 
 ## Checksum Calculation
