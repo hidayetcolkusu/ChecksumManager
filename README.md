@@ -187,6 +187,21 @@ Description
 Description
 
 ```
+ ChecksumCalculator checksumCalculator = new ChecksumCalculator();
+             
+ string json = @"{""Name"":""Hidayet Raşit"",""Surname"":""ÇÖLKUŞU""}";
+
+ bool result = checksumCalculator.Compare(json, 43460);
+ Resut:true
+```
+
+```
+ ChecksumCalculator checksumCalculator = new ChecksumCalculator();
+             
+ string json = @"{""Name"":""Hidayet Raşit"",""Surname"":""ÇÖLKUŞU"",""Checksum"":43460}"; 
+
+ bool result = checksumCalculator.Compare(json);
+ Result:true
 ```
 
 ###  Comparing Byte Array Checksum
