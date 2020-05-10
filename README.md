@@ -136,3 +136,30 @@ Description
  bytes = checksumCalculator.Fill(bytes, 4);
  Result: { 0, 1, 2, 3, 204, 120 }
 ```
+
+
+##  Comparing Checksum
+
+Description
+
+
+###  Comparing Object Checksum
+
+Description
+
+```
+```
+
+###  Comparing Json Checksum
+
+Description
+
+```
+```
+
+###  Comparing Byte Array Checksum
+
+Description
+
+```
+```
