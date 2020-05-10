@@ -66,10 +66,10 @@ Description
 ```
  ChecksumCalculator checksumCalculator = new ChecksumCalculator();
                         
- byte[] bytes = new byte[] { 0, 1, 2, 3, 4 };
+ byte[] bytes = new byte[] { 0, 1, 2, 3, 4, 0, 0 };
 
  ushort checksum = checksumCalculator.Calculate(bytes);
- Result: 4001
+ Result: 37945
 ```
 
 
@@ -209,4 +209,19 @@ Description
 Description
 
 ```
+ ChecksumCalculator checksumCalculator = new ChecksumCalculator();
+
+ byte[] bytes = new byte[] { 0, 1, 2, 3, 4, 0, 0 };
+
+ bool result = checksumCalculator.Compare(bytes, Convert.ToUInt16(37945));
+ Result:true
+```
+
+```
+ ChecksumCalculator checksumCalculator = new ChecksumCalculator();
+
+ byte[] bytes = new byte[] { 0, 1, 2, 3, 204, 120 };
+
+ bool result = checksumCalculator.Compare(bytes, 4);
+ Result:true
 ```
