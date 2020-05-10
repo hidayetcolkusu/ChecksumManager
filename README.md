@@ -1,6 +1,5 @@
 # ChecksumManager
 
-Description
 
 ## Object Conversion
 
@@ -45,7 +44,6 @@ Description
 
 ###  Json Checksum Calculation
 
-Description
 
 ```
  ChecksumCalculator checksumCalculator = new ChecksumCalculator();
@@ -132,7 +130,6 @@ Description
 
 ##  Comparing Checksum
 
-Description
 
 
 ###  Comparing Object Checksum
