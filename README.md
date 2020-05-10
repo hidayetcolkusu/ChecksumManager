@@ -71,3 +71,27 @@ Description
  ushort checksum = checksumCalculator.Calculate(bytes);
  Result: 4001
 ```
+
+
+## Filling
+
+Description
+
+###  Filling Object
+
+Description
+
+```
+```
+
+###  Filling Json
+Description
+
+```
+```
+
+###  Filling Byte Array
+Description
+
+```
+```
