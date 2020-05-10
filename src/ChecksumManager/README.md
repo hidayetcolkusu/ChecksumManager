@@ -1,11 +1,16 @@
 # ChecksumManager
- 
- Checksum Calculator
- 
 
- 
- Object Checksum Calculator
-  
+-
+
+## Checksum Calculator
+
+-
+
+###  Object Checksum Calculator
+
+-
+
+```
  public class TestClass
  {
     public string Name    { get; set; }
@@ -22,9 +27,17 @@
 
  ushort checksum = checksumCalculator.Calculate(testClass);
  Result: 43460
- 
- Json Checksum Calculator
- 
- Byte Aray Checksum Calculator
- 
+```
 
+
+###  Object Checksum Calculator
+
+-
+
+###  Json Checksum Calculator
+
+-
+
+###  Byte Aray Checksum Calculator
+
+-
